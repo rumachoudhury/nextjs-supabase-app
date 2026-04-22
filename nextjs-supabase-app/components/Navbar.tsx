@@ -2,6 +2,8 @@
 
 import React from "react";
 import { Kanban } from "lucide-react";
+import { SignInButton, SignUpButton } from "@clerk/nextjs";
+import { Button } from "./ui/button";
 function Navbar() {
   return (
     <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50 flex items-center justify-center">
@@ -13,6 +15,25 @@ function Navbar() {
           <span className="text-xl sm:text-2xl text-gray-600 font-bold ">
             Trello Clone
           </span>
+        </div>
+
+        {/* <div className="flex items-center space-x-2 sm:space-x-4">
+          <div>
+            <SignInButton>
+              <Button></Button>
+            </SignInButton>
+            <SignUpButton></SignUpButton>
+          </div>
+        </div> */}
+
+        <div className="flex items-center space-x-2 sm:space-x-4">
+          <SignInButton>
+            <Button variant="outline">Sign In</Button>
+          </SignInButton>
+
+          <SignUpButton>
+            <Button>Sign Up</Button>
+          </SignUpButton>
         </div>
       </div>
     </header>
