@@ -1,0 +1,20 @@
+"use client";
+
+import React from "react";
+import { Kanban } from "lucide-react";
+function Navbar() {
+  return (
+    <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <div className="container mx-auto gap-2 py-3 px-4 sm:py-4 flex items-center justify-center">
+        <div className="flex items-center space-x-2">
+          {/* <Trello /> */}
+          <Kanban className="h-6 w-6 sm:h-8 sm:w-8" />
+
+          <span>Trello Clone</span>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export default Navbar;
