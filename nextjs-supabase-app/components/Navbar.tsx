@@ -28,7 +28,7 @@ function Navbar() {
                 Welcome, {user.firstName ?? user.emailAddresses[0].emailAddress}
               </span>
 
-              <Button asChild>
+              <Button asChild size="sm" className="text-xs sm:text-sm">
                 <Link href="/dashboard" className="flex items-center">
                   Go to Dashboard
                   <ArrowRight className="ml-2 h-4 w-4" />
