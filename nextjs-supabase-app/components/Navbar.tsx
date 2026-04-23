@@ -5,10 +5,14 @@ import { ArrowRight, Kanban } from "lucide-react";
 import { SignInButton, SignUpButton, useUser, UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
   const { isSignedIn, user } = useUser();
+  const pathname = usePathname();
 
+  const isHomePage = pathname === "/";
+  const isDashboardPage = pathname === "/dashboard";
   return (
     <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between py-3 px-4 sm:py-4">
