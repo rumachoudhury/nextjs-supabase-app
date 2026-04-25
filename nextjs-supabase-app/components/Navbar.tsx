@@ -12,7 +12,6 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Badge } from "./ui/badge";
-import Image from "next/image";
 
 interface Props {
   boardTitle?: string;
