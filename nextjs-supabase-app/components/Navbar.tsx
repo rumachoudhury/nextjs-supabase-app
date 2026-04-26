@@ -61,8 +61,8 @@ export default function Navbar({
                 href="/dashboard"
                 className="flex items-center space-x-1 sm:space-x-2 text-gray-600 hover:text-gray-900 flex-shrink-0"
               >
-                <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5" />
-                <span className="hidden sm:inline">Back to dashboard</span>
+                <ArrowLeft className="h-5 w-5 sm:h-5 sm:w-5" />
+                <span className="hidden sm:inline">Back to the dashboard</span>
                 <span className="sm:hidden">Back</span>
               </Link>
               <div className="h-4 sm:h-6 w-px bg-gray-300 hidden sm:block" />
@@ -96,7 +96,7 @@ export default function Navbar({
                   }`}
                   onClick={onFilterClick}
                 >
-                  <Filter className="h-3 w-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                  <Filter className="h-4 w-4 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   <span className="hidden sm:inline">Filter</span>
                   {filterCount > 0 && (
                     <Badge
@@ -134,7 +134,7 @@ export default function Navbar({
               </span>
               <Link href="/dashboard">
                 <Button size="sm" className="text-xs sm:text-sm">
-                  Go to Dashboard <ArrowRight className="cursor-pointer" />
+                  Go to The Dashboard <ArrowRight className="cursor-pointer" />
                 </Button>
               </Link>
             </div>
