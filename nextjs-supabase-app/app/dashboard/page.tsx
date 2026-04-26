@@ -16,7 +16,7 @@ function DashboardPage() {
             {user?.firstName ?? user?.emailAddresses[0].emailAddress}! 👋
           </h1>
           <p className="text-gray-500">
-            Here&apos;s what&apos;s happening with your boards today
+            Here&apos;s what&apos;s happening with your boards today.
           </p>
         </div>
       </main>
