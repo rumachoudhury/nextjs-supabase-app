@@ -17,4 +17,20 @@ export const boardService = {
 
     return data;
   },
+
+  async createBoard(
+    board: Omit<Board, "id" | "created_at" | "updated_at">,
+  ): Promise<Board | null> {
+    const { data, error } = await supabase
+      .from("boards")
+      .insert(board)
+      .select()
+      .single();
+
+    if (error) {
+      console.error("Error fetching boards:", error.message);
+      return null;
+    }
+    return data;
+  },
 };
