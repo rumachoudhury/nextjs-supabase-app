@@ -1,7 +1,9 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
+import { Button } from "@/components/ui/button";
 import { useUser } from "@clerk/nextjs";
+import { Plus } from "lucide-react";
 import React from "react";
 
 function DashboardPage() {
@@ -18,6 +20,10 @@ function DashboardPage() {
           <p className="text-gray-500">
             Here&apos;s what&apos;s happening with your boards today.
           </p>
+          <Button className="w-full sm:w-auto">
+            <Plus className="w-4 h-4" />
+            Create Board
+          </Button>
         </div>
       </main>
     </div>
