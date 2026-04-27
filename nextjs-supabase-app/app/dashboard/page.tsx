@@ -12,7 +12,7 @@ function DashboardPage() {
       <main className="container mx-auto px-4 py-6 sm:py-8 text-2xl font-semibold text-gray-900 text-center">
         <div className="mb-6 sm:mb-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-            Welcome to dashboard!,{" "}
+            Welcome to dashboard!
             {user?.firstName ?? user?.emailAddresses[0].emailAddress}!
           </h1>
           <p className="text-gray-500">
