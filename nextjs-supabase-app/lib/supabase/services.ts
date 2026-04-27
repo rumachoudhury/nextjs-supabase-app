@@ -3,7 +3,7 @@ import { createSupabaseClient } from "./client";
 const supabase = createSupabaseClient();
 
 export const boardService = {
-  async getBoards(userId: string) {
+  async getBoards(userId: string): Promise<Board[]> {
     const { data, error } = await supabase
       .from("boards")
       .select("*")
