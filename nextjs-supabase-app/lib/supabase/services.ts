@@ -1,4 +1,5 @@
 import { createSupabaseClient } from "./client";
+import type { Board } from "./models";
 
 const supabase = createSupabaseClient();
 
@@ -23,7 +24,7 @@ export const boardService = {
   ): Promise<Board | null> {
     const { data, error } = await supabase
       .from("boards")
-      .insert(board)
+      .insert([board])
       .select()
       .single();
 
