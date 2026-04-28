@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useUser } from "@clerk/nextjs";
 import { Plus } from "lucide-react";
 import React from "react";
+import { useBoards } from "@/lib/hooks/useBoards";
 
 function DashboardPage() {
   const { user } = useUser();
