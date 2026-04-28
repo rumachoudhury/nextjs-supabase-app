@@ -52,12 +52,12 @@ export const columnService = {
   //     return data;
   //   },
 
-  async createBoard(
-    board: Omit<Board, "id" | "created_at" | "updated_at">,
+  async createColumn(
+    column: Omit<Board, "id" | "created_at" | "updated_at">,
   ): Promise<Board | null> {
     const { data, error } = await supabase
       .from("boards")
-      .insert([board])
+      .insert([column])
       .select()
       .single();
 
