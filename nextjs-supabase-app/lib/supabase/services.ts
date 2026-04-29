@@ -63,10 +63,14 @@ export const boardDataService = {
   }) {
     const board = await boardService.createBoard({
       title: boardData.title,
-      description: boardData.description,
+      description: boardData.description || null,
       color: boardData.color || "#FFFFFF",
       user_id: boardData.user_id,
     });
+
+    if (!board) {
+      throw new Error("Failed to create board");
+    }
 
     const defaultColumns = [
       { title: "To Do", sort_order: 0 },
@@ -74,5 +78,13 @@ export const boardDataService = {
       { title: "Review", sort_order: 2 },
       { title: "Done", sort_order: 3 },
     ];
+
+    await Promise.all(
+      defaultColumns.map((column) =>
+        columnService.createColumn({ ...column, board_id: board.id }),
+      ),
+    );
+
+    return board;
   },
 };
