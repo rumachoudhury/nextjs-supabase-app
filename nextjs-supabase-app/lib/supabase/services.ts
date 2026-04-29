@@ -67,5 +67,12 @@ export const boardDataService = {
       color: boardData.color || "#FFFFFF",
       user_id: boardData.user_id,
     });
+
+    const defaultColumns = [
+      { title: "To Do", sort_order: 0 },
+      { title: "In Progress", sort_order: 1 },
+      { title: "Review", sort_order: 2 },
+      { title: "Done", sort_order: 3 },
+    ];
   },
 };
