@@ -37,7 +37,7 @@ export default function Navbar({
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Kanban className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />
+            <Kanban className="h-5 w-5 sm:h-8 sm:w-8 text-blue-600" />
             <span className="text-xl sm:text-2xl font-bold text-gray-900">
               TaskFlow
             </span>
@@ -59,7 +59,7 @@ export default function Navbar({
             <div className="flex items-center space-x-2 sm:space-x-4 min-w-0">
               <Link
                 href="/dashboard"
-                className="flex items-center space-x-1 sm:space-x-2 text-gray-600 hover:text-gray-900 flex-shrink-0"
+                className="flex items-center space-x-1 sm:space-x-2 text-gray-600 hover:text-gray-600 flex-shrink-0"
               >
                 <ArrowLeft className="h-5 w-5 sm:h-5 sm:w-5" />
                 <span className="hidden sm:inline">Back to the dashboard</span>
