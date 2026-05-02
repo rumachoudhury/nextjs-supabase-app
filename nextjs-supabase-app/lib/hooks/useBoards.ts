@@ -10,6 +10,7 @@ export function useBoards() {
   const user = useUser()
 const [boards, setBoards] = useState<Board[]>([])
 const [loading, setLoading] = useState(true)
+const [error, setError] = useState<string | null>(null)
 
   async function createBoard(board: {
     title: string;
@@ -29,9 +30,9 @@ try {
   const newBoard = await boardDataService.createBoardWithDefaultColumn...boardData,
   userId: user.id
 
-}catch(erroe){
+}catch(error){
 
-
+setError(error instanceof Error ? error.message : "An unknown error occurred");
 
 }
 
