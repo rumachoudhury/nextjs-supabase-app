@@ -12,7 +12,7 @@ function DashboardPage() {
   const { createBoard } = useBoards();
 
   const handleCreateBoard = async () => {
-    await handleCreateBoard();
+    await createBoard({ title: "New Board", color: "#000000" });
   };
 
   return (
