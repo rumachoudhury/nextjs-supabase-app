@@ -35,5 +35,5 @@ export function useBoards() {
       );
     }
   }
-  return { createBoard };
+  return { boards, loading, error, createBoard };
 }
