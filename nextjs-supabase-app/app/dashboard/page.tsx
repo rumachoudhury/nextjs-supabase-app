@@ -6,6 +6,7 @@ import { useUser } from "@clerk/nextjs";
 import { Plus } from "lucide-react";
 import React from "react";
 import { useBoards } from "@/lib/hooks/useBoards";
+import { Card, CardContent } from "@/components/ui/card";
 
 function DashboardPage() {
   const { user } = useUser();
@@ -31,6 +32,12 @@ function DashboardPage() {
             <Plus className="w-4 h-4" />
             Create Board
           </Button>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
+          <Card>
+            <CardContent></CardContent>
+          </Card>
         </div>
       </main>
     </div>
